@@ -9,14 +9,14 @@ import os
 if 'buffer_memory' not in st.session_state:
     st.session_state.buffer_memory = ConversationBufferWindowMemory()
 
-if 'messages' not in st.session_state.keys:
+if 'messages' not in st.session_state:
     st.session_state.messages = [
         {"role": "bot", "content": "Hello! I am a chatbot. How can I help you?"}
     ]
 
 
 llm = ChatOpenAI(model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo", 
-                 openai_api_key = st.secrets["TOGETHER_API_KEY"] , ## use your key
+                 openai_api_key = "D352705caf13f5d2c120c06bf488126c644a996c06c96334725fe0e6e0fcef8c",##st.secrets["TOGETHER_API_KEY"] , ## use your key
                       openai_api_base = "https://api.together.xyz/v1"
 )
 
