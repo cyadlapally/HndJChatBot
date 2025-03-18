@@ -9,7 +9,7 @@ import os
 if 'buffer_memory' not in st.session_state:
     st.session_state.buffer_memory = ConversationBufferWindowMemory()
 
-if "messages" not in st.session_state.keys:
+if 'messages' not in st.session_state.keys:
     st.session_state.messages = [
         {"role": "bot", "content": "Hello! I am a chatbot. How can I help you?"}
     ]
